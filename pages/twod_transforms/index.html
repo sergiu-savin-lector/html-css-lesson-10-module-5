@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../styles/reset.css" />
+    <link rel="stylesheet" href="../../styles/fonts.css" />
+    <link rel="stylesheet" href="../../styles/main.css" />
+
+    <title>HTML/CSS Modulul 5 - Lectia 10</title>
+    <style>
+      .rotate-item {
+        background-color: aliceblue;
+        border: 1px solid #555;
+        padding: 15px;
+        transform: rotate(270deg) translate(-1px, -79px);
+        width: fit-content;
+      }
+
+      .scale-on-hover {
+        border-radius: 8px;
+        background: royalblue;
+        color: white;
+        font-weight: bold;
+        width: 200px;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        outline: none;
+        border: 2px solid rgb(52, 85, 183);
+      }
+
+      .scale-on-hover:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+      }
+
+      .mirror-text {
+        transform: scale(-1);
+        /*transform: rotate(180deg);*/
+      }
+
+      .translate-left {
+        background: royalblue;
+        width: fit-content;
+        padding: 8px 16px;
+        color: white;
+        transform: translate(-40px);
+      }
+
+      .center {
+        height: 200px;
+        position: relative;
+        border: 3px solid green;
+      }
+
+      .center p {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container example-page">
+      <h1 class="heading-primary sticky">Transformari 2D</h1>
+
+      <article>
+        <p>
+          Transformările 2D vă permit să
+          <em>mutați, rotiți, scalați și deformați</em> HTML elemente.
+          Proprietatea transform creează transformările. The valorile
+          proprietăților sunt funcții, cum ar fi
+          <em>translate, scale și rotate</em>.
+        </p>
+      </article>
+
+      <section class="lesson-example">
+        <div class="center">
+          <p>I am vertically and horizontally centered.</p>
+        </div>
+      </section>
+
+      <section class="lesson-example">
+        <div class="translate-left">Move Left -40px</div>
+      </section>
+
+      <section class="lesson-example">
+        <button class="scale-on-hover">Scale</button>
+      </section>
+
+      <section class="lesson-example mt-lg">
+        <div class="rotate-item">Rotate 270 degrees</div>
+      </section>
+
+      <section class="lesson-example mt-lg">
+        <div class="mirror-text">Acest text este scris invers</div>
+      </section>
+    </main>
+  </body>
+</html>

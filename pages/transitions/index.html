@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../styles/reset.css" />
+    <link rel="stylesheet" href="../../styles/fonts.css" />
+    <link rel="stylesheet" href="../../styles/main.css" />
+
+    <title>HTML/CSS Modulul 5 - Lectia 10</title>
+    <style>
+      /* transition: <property> <duration> <timing-function> <delay>; */
+      .delay {
+        font-size: 14px;
+        transition-property: font-size;
+        transition-duration: 4s;
+        transition-delay: 2s;
+      }
+
+      .delay:hover {
+        font-size: 36px;
+      }
+
+      .button {
+        background: royalblue;
+        border: 2px solid #3859be;
+        border-radius: 8px;
+        color: white;
+        cursor: pointer;
+        font-size: 24px;
+        padding: 8px 16px;
+        text-decoration: none;
+        transition: 0.5s transform ease-in-out;
+      }
+
+      .button:hover {
+        background: #2b4799;
+        border: 2px solid #263d83;
+        transform: scale(1.05);
+      }
+
+      .btn {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: none;
+        background: slateblue;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        transform: translateY(-10px);
+      }
+
+      .with-transition {
+        transition: transform 250ms;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container example-page">
+      <article>
+        <h1 class="heading-primary">Tranziții in CSS</h1>
+
+        <p class="mt-md">
+          <a
+            href="https://www.joshwcomeau.com/animation/css-transitions/"
+            target="_blank"
+            rel="noreferrer noopener nofollow"
+          >
+            Articol
+          </a>
+        </p>
+      </article>
+
+      <section class="lesson-example">
+        <h2>No transition effect</h2>
+        <button class="btn">Hello World</button>
+      </section>
+
+      <section class="lesson-example">
+        <h2>Transition effect</h2>
+        <button class="btn with-transition">Hello World</button>
+      </section>
+
+      <section class="lesson-example">
+        <div class="delay">Font Size increase</div>
+      </section>
+
+      <section class="lesson-example">
+        <button class="button">Hover me</button>
+      </section>
+    </main>
+  </body>
+</html>

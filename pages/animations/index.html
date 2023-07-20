@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../styles/reset.css" />
+    <link rel="stylesheet" href="../../styles/fonts.css" />
+    <link rel="stylesheet" href="../../styles/main.css" />
+
+    <title>HTML/CSS Modulul 5 - Lectia 10</title>
+    <style>
+      /* @keyframes nume-animatie */
+      @keyframes color-change {
+        from {
+          background-color: red;
+        }
+        to {
+          background-color: yellow;
+        }
+      }
+
+      @keyframes color-change-percent {
+        0% {
+          background-color: red;
+          /* top: 0;
+          left: 0; */
+        }
+        15% {
+          background-color: yellow;
+          /* top: 0;
+          left: 100px; */
+        }
+        50% {
+          background-color: green;
+          /* top: 100px;
+          left: 100px; */
+        }
+        75% {
+          background-color: yellow;
+          /* top: 100px;
+          left: 0; */
+        }
+        100% {
+          background-color: red;
+          /* top: 0;
+          left: 0; */
+        }
+      }
+
+      /* animation: duration | easing-function | delay |
+         iteration-count | direction | fill-mode | play-state | name */
+      .box {
+        width: 150px;
+        height: 150px;
+        background-color: red;
+      }
+
+      .color-change {
+        animation: 4s infinite color-change;
+        position: relative;
+      }
+
+      .color-change-percent {
+        position: relative;
+        animation: 5s infinite ease-in-out color-change-percent;
+      }
+
+      /* Spinner */
+      @keyframes rotate {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .spinner-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .spinner {
+        display: inline-flex;
+        width: 40px;
+        height: 40px;
+        border: 4px solid #a7fbff;
+        border-top: 4px solid white;
+        border-radius: 50%;
+      }
+
+      .spinner {
+        transition-property: transform;
+        animation-name: rotate;
+        animation-duration: 1.2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container example-page">
+      <article>
+        <h1 class="heading-primary">Animații în CSS</h1>
+        <p class="note">
+          Animațiile și Tranzițiile sunt efecte diferite în CSS.
+          <br />
+          Tranzițiile vă permit să modificați comportamentul și aspectul unui
+          element, dar numai atunci când există un declanșator, cum ar fi un
+          utilizator care trece cu mouse-ul peste element. Odată declanșate,
+          tranzițiile se pot trece doar de la o stare inițială la o stare
+          finală. Nu puteți specifica niciun punct intermediar, iar tranziția
+          poate rula o singură dată.
+          <br />
+          Animațiile, pe de altă parte, se pot repeta înapoi și pot trece de la
+          o stare inițială la o stare intermediară la o stare finală, datorită
+          cadrelor cheie. Cadrele cheie indică începutul și sfârșitul animației,
+          precum și orice pași intermediari dintre început și sfârșit. Cu alte
+          cuvinte, fiecare cadru cheie descrie modul în care elementul animat ar
+          trebui să fie redat la un moment dat în timpul secvenței de animație.
+        </p>
+
+        <p>Animațiile CSS au trei mari avantaje:</p>
+        <ul class="bullet-list">
+          <li>
+            Sunt ușor de scris (fără a fi nevoie de Javascript / Flash etc.)
+          </li>
+          <li>
+            Animațiile rulează bine, chiar și pe dispozitive mai puțin
+            performante.
+          </li>
+          <li>
+            Permițând browserului să controleze secvența de animație el poate să
+            optimizeze performanța și eficiența ei, de exemplu, reducând
+            frecvența de actualizare a animațiilor care rulează în file care nu
+            sunt vizibile în prezent.
+          </li>
+        </ul>
+      </article>
+
+      <section class="lesson-example">
+        <div class="box color-change"></div>
+        <div class="box color-change-percent mt-md"></div>
+      </section>
+
+      <section class="lesson-example blue-bg p-md">
+        <h2>Spinner doar in HTML/CSS</h2>
+        <div class="spinner-container"><i class="spinner"></i> Loading</div>
+      </section>
+    </main>
+  </body>
+</html>
